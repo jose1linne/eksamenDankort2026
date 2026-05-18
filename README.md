@@ -13,17 +13,17 @@ Vi kommer til at skrive her, hvem der koder hvad:
 
 ### Komponenter:
 
-naturomraadercards.astro -
-footer.astro -
-header.astro -
-dropdown -
-CTA -
+naturomraadercards.astro - Denzel
+footer.astro - Laila
+header.astro - Josefine
+dropdown - Laila
+CTA - Denzel
 
 ### pages:
 
-Forsiden -
-Naturomraader -
-Q&A -
+Forsiden - Josefine
+Naturomraader - Denzel
+Q&A - Laila
 
 ## Database struktur
 
