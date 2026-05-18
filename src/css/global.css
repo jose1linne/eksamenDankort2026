@@ -1,0 +1,43 @@
+/**
+Font:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+**/
+
+/**img reset**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: #49b000;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: #49b000;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #49b000;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --btn-color: #569429;
+  --btn-hover-color: #a4d780;
+  --primary-bg-color: #ffffff;
+  --second-bg-color: #f2f2f2;
+}
