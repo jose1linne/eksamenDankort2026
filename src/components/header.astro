@@ -1,0 +1,139 @@
+---
+
+---
+
+<header>
+  <div class="logo">
+    <a href="/index">
+      <img src="/public/img/logo.webp" alt="logo" />
+    </a>
+  </div>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="/index">Forside</a></li>
+      <li><a href="/naturomraader">Naturområder</a></li>
+      <li><a href="/q&a">Ofte stillede spørgsmål</a></li>
+    </ul>
+
+    <button class="burger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </nav>
+</header>
+
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+
+  burger.addEventListener("click", burgerClick);
+  function burgerClick() {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  }
+</script>
+
+<style>
+  /*gør strejerne usynlig når de roteres*/
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  /*Når min menu dropper down*/
+  nav.active .menu {
+    max-height: 300px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(63, 63, 63, 0.333);
+  }
+
+  /*Hele header inden man åbner*/
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 40px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    border-radius: 20px 0px 20px 20px;
+
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(63, 63, 63, 0.333);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    text-align: end;
+    font-size: 24px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .menu a:hover {
+    color: #f2f2f2;
+  }
+
+  .burger {
+    width: 40px;
+    height: 40px;
+    padding: 5px 5px 0px 5px;
+
+    cursor: pointer;
+    border: none;
+    background-color: white;
+  }
+
+  .burger .line {
+    display: block;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+</style>
