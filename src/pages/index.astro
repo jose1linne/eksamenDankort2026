@@ -1,17 +1,37 @@
 ---
-
+import Layout from "../layouts/layout.astro";
+import "../css/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div>
+    <img src="/public/img/placeholder.png" alt="placeholderimg" />
+  </div>
+
+  <div>
+    <h1 class="pcenter">Mange bække små</h1>
+    <p class="pcenter">Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske Naturfond. Det bliver til mere end 10 millioner kroner hvert år, der går ubeskåret til opkøb og udvikling af mere vild og varig natur i Danmark. Vi kalder det Dankort Øremærket. Målet er ikke at forbruge mere, men at skabe mere plads til den danske natur.</p>
+    <h2 class="pcenter">CTA KNAP</h2>
+  </div>
+
+  <div>
+    <h1 class="pcenter">PLACEHOLDER FOR INDSAMLINGSBELØB</h1>
+  </div>
+
+  <section>
+    <div>
+      <img src="/public/img/placeholderreel.png" alt="placeholderreel.png" />
+    </div>
+
+    <div>
+      <h2>Læg dit Dankort i Apple Pay</h2>
+      <p>Det er nu muligt for kunder i alle banker, der udsteder Visa/Dankort eller Mastercard Dankort at betale med Dankort i Apple Pay.  Det eneste det kræver er, at du bruger 2 minutter på at tilføje dit kort i din Apple wallet eller via din mobilbank.   Bruger du allerede Visa/Dankort eller Mastercard Dankort med Apple Pay skal du fjerne dit kort og tilføje det på ny for at Dankort delen bliver aktiveret.   Så gør dig selv, og dem du handler hos, en tjeneste. Læg dit Dankort i Apple Pay.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .pcenter {
+    text-align: center;
+  }
+</style>

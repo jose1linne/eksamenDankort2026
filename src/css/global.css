@@ -35,6 +35,23 @@ p {
   font-family: "Raleway", sans-serif;
 }
 
+a {
+  font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 800px) {
+  body {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 :root {
   --btn-color: #569429;
   --btn-hover-color: #a4d780;
