@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/layout.astro";
+import "../css/global.css";
+import Naturcard from "../components/Naturcard.astro";
+import Button from "../components/cta.astro"
+
+const url = `${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/naturomraader?select=*`;
+const apiKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+const options = {
+headers: {
+apikey: apiKey,
+},
+};
+
+const data = await fetch(url, options)
+.then((res) => res.json());
+
+//console.log(data);
+---
+
+<Layout>
+
+  {data.map((naturomraader) => <Naturcard naturomraader={naturomraader} />)}
+<Button text="Ofte stillede spørgsmål" href="/#" />
+</Layout>
+
+<style>
+
+</style>
