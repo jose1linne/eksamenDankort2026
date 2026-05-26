@@ -1,102 +1,121 @@
 ---
-
+import "../css/global.css";
+import Layout from "../layouts/layout.astro";
 ---
 
 <footer>
   <section class="grid-1">
-    <div>
+    <div class="footer-box">
       <ul>
         <h3>Dankort</h3>
-        <li>Om Dankort</li>
-        <li>Presse</li>
-        <li>Download logoer</li>
+        <li>
+          <img src="billeder/Blomstfootercomponent.png" alt="" />Om Dankort
+        </li>
+        <li>
+          <img src="billeder/Blomstfootercomponent.png" alt="" /> Presse
+        </li>
+        <li>
+          <img src="billeder/Blomstfootercomponent.png" alt="" />Download logoer
+        </li>
       </ul>
-    </div>
 
-    <div>
-      <ul>
-        <li>Kontakt salg</li>
-        <li>Kontakt Kundeservice</li>
-        <li>Support erhverv</li>
-        <li>Support privat</li>
-      </ul>
-    </div>
+      <div>
+        <ul>
+          <h3>Support</h3>
+          <li>
+            <img src="billeder/Blomstfootercomponent.png" alt="" />Kontakt salg
+          </li>
+          <li>
+            <img src="billeder/Blomstfootercomponent.png" alt="" />Kontakt
+            Kundeservice
+          </li>
+          <li>
+            <img src="billeder/Blomstfootercomponent.png" alt="" />Support
+            erhverv
+          </li>
+          <li>
+            <img src="billeder/Blomstfootercomponent.png" alt="" />Support
+            privat
+          </li>
+        </ul>
+      </div>
 
-    <div>
-      <ul>
-        <li>Privatlivspolitikker</li>
-        <li>Cookies</li>
-        <li>AEE regulativ</li>
-      </ul>
+      <div>
+        <ul>
+          <h3>Politikker</h3>
+          <li>
+            <img
+              src="billeder/Blomstfootercomponent.png"
+              alt=""
+            />Privatlivspolitikker
+          </li>
+          <li>
+            <img src="billeder/Blomstfootercomponent.png" alt="" />Cookies
+          </li>
+          <li>
+            <img src="billeder/Blomstfootercomponent.png" alt="" />AEE regulativ
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
-</footer>
-<style>
-  footer {
-    background: #efefef;
 
-    padding: 60px 80px;
-  }
+  <style>
+    footer {
+      background: #ebeaea;
+      padding: 3px 2px 6px;
+    }
 
-  /* GRID */
+    /* GRID */
 
-  .grid-1 {
-    display: grid;
+    .grid-1 {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 1 350px;
+    }
 
-    grid-template-columns: repeat(3, 1fr);
+    /* LIST */
 
-    gap: 80px;
-  }
+    .grid-1 ul {
+      list-style: none;
+      padding: 70px;
+    }
 
-  /* LIST */
+    /* TITLE */
 
-  .grid-1 ul {
-    list-style: none;
+    .grid-1 h3 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #111;
+    }
 
-    padding: 0;
-  }
+    /* LIST ITEMS */
 
-  /* TITLE */
+    .grid-1 li {
+      font-family: "Raleway", sans-serif;
+      font-size: 25px;
+      color: #222;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+    /* FLOWER ICON */
 
-  .grid-1 h3 {
-    font-size: 32px;
+    .footer-box {
+      display: flex;
+      gap: 20px;
+    }
 
-    font-weight: 700;
+    .footer-box img {
+      width: 25px;
+      /* height: auto; */
+    }
 
-    margin-bottom: 25px;
-
-    color: #111;
-  }
-
-  /* LIST ITEMS */
-
-  .grid-1 li {
-    font-size: 28px;
-
-    color: #222;
-
-    margin-bottom: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-  }
-
-  /* FLOWER ICON */
-
-  .grid-1 li::before {
-    content: "✿";
-
-    color: red;
-
-    font-size: 24px;
-  }
-
-
-
-  @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
     .grid-1 {
       grid-template-columns: 1fr;
 
@@ -110,5 +129,6 @@
     .grid-1 li {
       font-size: 20px;
     }
-  }
-</style>
+  } */
+  </style>
+</footer>
