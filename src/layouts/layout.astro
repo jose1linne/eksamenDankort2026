@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/footer.astro";
 const { titel } = Astro.props;
 ---
 
@@ -8,11 +9,19 @@ const { titel } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/logo.webp" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/img/logo.webp"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>{titel}</title>
   </head>
@@ -20,5 +29,6 @@ const { titel } = Astro.props;
   <body>
     <Header />
     <slot />
+    <footer></footer>
   </body>
 </html>
