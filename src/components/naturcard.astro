@@ -11,9 +11,11 @@
 
 <style>
     .info-text {
-        min-width: 200;
+        min-width: 200px;
+        box-shadow: 1px 2px 12px black;
     }
-    @media (max-width: 768px) {
+    
+    @media (max-width: 880px) {
 
     .info-text {
 
@@ -30,7 +32,7 @@
 
         padding: 2rem;
 
-        border-radius: 20px 20px 0 0;
+        border-radius: 20px;
 
        opacity: 0;
        visibility: hidden;
@@ -39,13 +41,11 @@
     transition:
       opacity 0.3s ease,
       transform 0.3s ease;
-}
-    
-.info-text.active{
+    }
+    .info-text.active{
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
 }
-    }
 
 </style>
