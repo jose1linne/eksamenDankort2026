@@ -39,13 +39,13 @@ a {
   font-family: "Raleway", sans-serif;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 880px) {
   body {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   body {
     margin-left: 20px;
     margin-right: 20px;
