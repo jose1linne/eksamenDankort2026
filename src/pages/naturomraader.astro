@@ -131,12 +131,12 @@ const billede = document.querySelector(".info-box");
 // Finder ALLE hotspots
 const hotspots = document.querySelectorAll("#Hotspots path");
 
-
+const infoPopup = document.querySelector("#infoPopup");
 // Loop gennem alle hotspots
 hotspots.forEach((spot) => {
 
     spot.addEventListener("click", () => {
-const infoPopup = document.querySelector("#infoPopup");
+
         // Finder matchende objekt i API
         const område = data.find(
             item => item.id == spot.id

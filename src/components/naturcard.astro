@@ -1,5 +1,4 @@
 ---
-const { naturomraader } = Astro.props;
 ---
 <section class="info-text" id="infoPopup">
             <h2>Guide og information</h2>
@@ -12,7 +11,7 @@ const { naturomraader } = Astro.props;
 
 <style>
     .info-text {
-        min-width: 400px;
+        min-width: 200;
     }
     @media (max-width: 768px) {
 
@@ -20,7 +19,6 @@ const { naturomraader } = Astro.props;
 
         position: fixed;
 
-        bottom: 0;
         left: 0;
 
         width: 100%;
@@ -34,13 +32,20 @@ const { naturomraader } = Astro.props;
 
         border-radius: 20px 20px 0 0;
 
-        transform: translateY(100%);
-        transition: 0.3s;
-    }
+       opacity: 0;
+       visibility: hidden;
+    transform: translateY(20px);
 
-    .info-text.active {
-        transform: translateY(0);
-    }
-
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
 }
+    
+.info-text.active{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+    }
+
 </style>
