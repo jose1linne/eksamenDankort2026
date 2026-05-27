@@ -1,0 +1,312 @@
+---
+import Layout from "../layouts/layout.astro";
+import "../css/global.css";
+---
+
+<Layout>
+  <h1>Ofte stillede spørgsmål</h1>
+  <div class="container">
+    <div class="speechbubbles1">
+      <img src="billeder/Union copy.webp" alt="" />
+      <p>Koster det mig noget som forbruger?</p>
+    </div>
+
+    <div class="speechbubbles2">
+      <img src="billeder/Union.webp" alt="" />
+      <p>
+        Nej. Alle donationer sker gratis og automatisk for dig som kortholder.
+      </p>
+    </div>
+
+    <img class="img" src="billeder/1Berry.webp" alt="" />
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Hvem betaler den ene øre som Dankort donerer?
+    </span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Alle Dankorts pengebidrag til Naturfonden kommer fra Dankort selv, der er
+      ejet af Nets/Nexi.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Hvorfor samarbejder vi med Den Danske Naturfond?</span
+    >
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Dankort ønsker at styrke den danske natur og bidrage til den kollektive
+      naturgenopretning i hele Danmark. Til det formål er Den Danske Naturfond
+      en velvalgt samarbejdspartner, da vores bidrag går ubeskåret til at sikre
+      mere blivende natur i hele Danmark – øre for øre.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Opfordrer Dankort til merforbrug blandt forbrugere?</span
+    >
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Nej, vi ønsker ikke at invitere til merforbrug. Tvært imod ønsker vi, at
+      mere forbrug i Danmark sker med omtanke og med hensyn til natur, klima og
+      miljø. Initiativet handler om at vælge Dankort, når du alligevel betaler,
+      hvis du ønsker et gratis og automatisk bidrag til mere vild natur i
+      Danmark.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Støtter Den Danske Naturfond merforbrug ved donation?</span
+    >
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Nej, de ønsker ikke at opfordre til merforbrug. Deres andel i samarbejdet
+      med Dankort er, at de modtager en øre, når du alligevel betaler med dit
+      Dankort. Hele det bidrag omsætter de til mere vild natur i Danmark i
+      naturområder, hvor alle kan opleve og nyde naturen året rundt.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Hvorfor donerer Dankort til naturen og ikke andre formål?</span
+    >
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Vi har valgt at støtte den danske natur med Dankort Øremærket, fordi
+      naturen er vigtig for os alle. Desværre er naturen under pres, og mange
+      dyr og planter forsvinder. Sammen med Den Danske Naturfond kan vi gøre en
+      konkret forskel for naturen – til glæde for både nuværende og kommende
+      generationer.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Er Dankort det billigste betalingsmiddle for butikkerne?</span
+    >
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      For langt de fleste butikker i Danmark er det billigere for dem, når deres
+      kunder betaler med Dankort fremfor med andre kort. Det er det, fordi
+      gebyret på Dankort oftest er lavere. Priserne på Dankort i fysisk handel
+      er desuden reguleret ved lov og godkendes af Konkurrencestyrelsen.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text">
+      Hvordan sikre Naturfonden, at dyrene har det godt?</span
+    >
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Ingen dyr i Naturfondens naturområder må sulte eller vanrøgtes. Dyrene
+      skal tilses efter gældende lovgivning, og dyrlægernes anbefalinger skal
+      følges. Den Danske Naturfond ejer ikke selv dyrene, men samarbejder med
+      kommuner, nationalparker og lokale dyreholdere, som har ansvaret for, at
+      dyreværnslovgivningen overholdes.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text"> Har Naturfonden dyr bag hegn?</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Naturfonden har både naturområder med heste og kvæg i indhegninger og
+      naturområder uden. Det gælder for eksempel de urørte skove Kollund Skov,
+      Kraruplund og Frejlev Skov, som er uden hegn.
+    </p>
+  </div>
+
+  <div class="dropdown">
+    <span class="dropdown-text"> Hvad laver Naturfonden i naturområderne?</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-content">
+    <p>
+      Naturfonden giver naturen mere plads ved at beskytte og genoprette
+      naturområder. De genskaber naturlige levesteder ved at lade vandet flyde
+      frit, skabe mere løvskov, omdanne marker til blomsterenge og lade skove
+      stå urørte. Det giver bedre forhold for vilde dyr, planter, svampe og
+      insekter.
+    </p>
+  </div>
+</Layout>
+
+<script>
+  document.querySelectorAll(".dropdown").forEach((dropdown) => {
+    dropdown.addEventListener("click", () => {
+      const content = dropdown.nextElementSibling;
+      const arrow = dropdown.querySelector(".arrow");
+
+      if (!content || !content.classList.contains("dropdown-content")) return;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        content.classList.remove("active");
+        arrow.style.transform = "rotate(0deg)";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.classList.add("active");
+        arrow.style.transform = "rotate(180deg)";
+      }
+    });
+  });
+</script>
+
+<style>
+  h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  /************ PAGE LAYOUT ************/
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /************ TOP SPEECH BUBBLE ************/
+  .speechbubbles1 {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    width: 550px;
+  }
+
+  .speechbubbles1 img {
+    width: 100%;
+  }
+
+  .speechbubbles1 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  /************ BOTTOM SPEECH BUBBLE ************/
+  .speechbubbles2 {
+    position: absolute;
+    top: 520px;
+    left: 200px;
+    width: 500px;
+  }
+
+  .speechbubbles2 img {
+    width: 100%;
+  }
+
+  .speechbubbles2 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    text-align: center;
+    font-size: 26px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  /************ berry img ************/
+  .img {
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+    width: 600px;
+  }
+  /************ DROPDOWN BOX ************/
+  .dropdown {
+    background-color: #c7ebad;
+    color: #569429;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 15px auto;
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: 2px solid #569429;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  /************ DROPDOWN TEXT (THE QUESTIONS) ************/
+  .dropdown-text {
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    white-space: normal;
+    word-break: break-word;
+    flex: 1;
+    padding-right: 30px;
+  }
+  /************ DROPDOWN ARROW ************/
+  .dropdown .arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .dropdown.active .arrow {
+    transform: rotate(180deg);
+  }
+  /************ DROPDOWN CONTENT ( WHAT IN IT ) ************/
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    box-sizing: border-box;
+  }
+
+  .dropdown-content.active {
+    max-height: 300px;
+    padding: 2.5px 250px 95px;
+  }
+  /************ DROPDOWN BUTTON ************/
+  .dropdown-button {
+    display: inline-block;
+    margin-top: 20px;
+
+    background: #569429;
+    color: white;
+
+    padding: 12px 22px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+  }
+  /************ DROPDOWN BOX (THE ANSWERS) ************/
+  .dropdown-content p {
+    max-width: 100%;
+    width: 100%;
+  }
+</style>
