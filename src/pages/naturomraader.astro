@@ -4,7 +4,6 @@ import Layout from "../layouts/layout.astro";
 import "../css/global.css";
 import Naturcard from "../components/Naturcard.astro";
 import Button from "../components/cta.astro"
-import Counter from "../components/Counter.astro"
 
 const url = `${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/naturomraader?select=*`;
 
@@ -101,10 +100,10 @@ const data = await fetch(url, options)
 <Naturcard />
     </main>
     <Button text="Ofte stillede spørgsmål" href="/#" />
-<Counter />
 </Layout>
 
 <style>
+  
 main{
     display: grid;
     grid-template-columns: 5fr 3fr;
