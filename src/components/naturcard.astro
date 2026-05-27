@@ -1,7 +1,46 @@
 ---
 const { naturomraader } = Astro.props;
 ---
-<h2>{naturomraader.title}</h2>  
-<img src={naturomraader.image} alt={naturomraader.title} />
-  
-</a>
+<section class="info-text" id="infoPopup">
+            <h2>Guide og information</h2>
+            <article>
+                <p class="placeholder">Click på en af hotspotsne</p>
+            </article>
+            <aside id="efficiency" class="info-box"></aside>
+            <button id="closePopup">Luk</button>
+</section>
+
+<style>
+    .info-text {
+        min-width: 400px;
+    }
+    @media (max-width: 768px) {
+
+    .info-text {
+
+        position: fixed;
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 60vh;
+
+        background: white;
+
+        z-index: 1000;
+
+        padding: 2rem;
+
+        border-radius: 20px 20px 0 0;
+
+        transform: translateY(100%);
+        transition: 0.3s;
+    }
+
+    .info-text.active {
+        transform: translateY(0);
+    }
+
+}
+</style>
