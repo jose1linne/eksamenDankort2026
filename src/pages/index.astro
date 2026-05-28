@@ -6,6 +6,7 @@ import Cta from "../components/cta.astro";
 ---
 
 <Layout>
+  <div></div>
   <div class="video-wrapper">
     <video class="herovideo" controls>
       <source src="public/videoer/heroVideo.mp4" type="video/mp4" />
@@ -476,13 +477,14 @@ import Cta from "../components/cta.astro";
     </div>
   </section>
 
-  <img class="danmarkskort" src="/img/danmarkskort.webp" alt="" />
-
+  <img class="danmarkskort" src="/imgs/danmarkskort.webp" alt="" />
+<div/>
   <style>
-    .danmarkskort {
-      width: 100px;
-      z-index: 100;
-    }
+      .danmarkskort {
+  width: 200px;
+  height: auto;
+}
+    
     .arealh1 {
       color: white;
       margin-bottom: 30px;
