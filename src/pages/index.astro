@@ -21,7 +21,7 @@ import Cta from "../components/cta.astro";
     <Cta text="Se hvordan vi samarbejder" href="/#" />
   </div>
 
-  <div>
+  <div class="sommerfugl-wrapper">
     <svg id="sommerfugl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270.49 165.5">
       <g id="vinge">
         <path
@@ -108,7 +108,7 @@ import Cta from "../components/cta.astro";
     </div>
 
     <div class="applepayTekst">
-      <div>
+      <div class="fugl-wrapper">
         <svg id="fugl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.57 148.34">
           <path d="M2.41,38.71h29.06c3.22,0,3.22-5,0-5H2.41c-3.22,0-3.22,5,0,5h0Z" style="fill: #dd2529;"></path>
           <path d="M4.65,36.94c7.51-3.2,14.85-6.79,21.97-10.77,2.81-1.57.29-5.89-2.52-4.32-7.13,3.98-14.46,7.58-21.97,10.77-1.24.53-1.52,2.36-.9,3.42.75,1.29,2.17,1.43,3.42.9h0Z" style="fill: #dd2529;"></path>
@@ -211,9 +211,9 @@ import Cta from "../components/cta.astro";
         <Cta text="Læs mere her" href="/#" />
       </div>
 
-      <div>
-        <svg id="Layer1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.47 130.24">
-          <g id="Bi">
+      <div class="bi-wrapper">
+        <svg id="bi" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.47 130.24">
+          <g id="asdas">
             <path id="biKrop" d="M78.1,68.9c-6.11,12.82-31.77,12.63-51.41,3.26C7.05,62.8-3.92,44.81,2.19,31.99c6.11-12.82,26.99-15.62,46.63-6.26,19.64,9.37,35.39,30.35,29.28,43.17Z" style="fill: none; stroke: #010101; stroke-miterlimit: 10;"></path>
             <g id="biFarve">
               <path
@@ -246,8 +246,11 @@ import Cta from "../components/cta.astro";
           </g>
         </svg>
       </div>
-
+<div class="dankort-wrapper">
+        <img class="dankort" src="/public/img/dankortimg.webp" alt="dankortimg" />
+        </div>
       <div class="svgContainer">
+        
         <div>
           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.04 211.48">
             <g id="Blomst4">
@@ -470,8 +473,6 @@ import Cta from "../components/cta.astro";
             </g>
           </svg>
         </div>
-
-        <img class="dankort" src="/public/img/dankortimg.webp" alt="dankortimg" />
       </div>
     </div>
   </section>
@@ -511,14 +512,15 @@ import Cta from "../components/cta.astro";
       border-radius: 20px;
       display: block;
     }
-
+.sommerfugl-wrapper {
+  display: flex;
+  justify-content: center;
+}
       /*toppen af vores site*/
            #sommerfugl {
-        width: 50px;
-        position: relative;
-        top: -50px;
-        left: 11px;
-
+        width: 100px;
+      transform: translateX(-130px)
+             translateY(-10px) rotate(-10deg);
         z-index: 10;
       }
 
@@ -562,25 +564,28 @@ import Cta from "../components/cta.astro";
         margin-top: 20px;
       }
 
+      .fugl-wrapper {
+        display: flex;
+        justify-content: center;
+      }
       #fugl {
         width: 50px;
-        position: relative;
-        top: 27px;
-        left: 260px;
+      transform: translateX(130px)
+             translateY(25px);
 
         z-index: 10;
       }
 
       /*Dankort Container*/
       /*bi*/
-      #Layer1 {
+      .bi-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      #bi {
         width: 100px;
-
-        position: relative;
-        top: 18px;
-        left: 65px;
-
-        transform: rotate(15deg);
+        transform:  translateX(5px)
+             translateY(40px) rotate(15deg);
       }
 
       .dankortContainer {
@@ -598,13 +603,16 @@ import Cta from "../components/cta.astro";
         display: flex;
         align-items: end;
       }
+.dankort-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
       .dankort {
-        transform: rotate(90deg);
+        transform: translateX(70px)
+             translateY(-20px);
         width: 100px;
-        position: relative;
-        top: -132px;
-        left: -123px;
+        
       }
    
       .container {
@@ -621,7 +629,7 @@ import Cta from "../components/cta.astro";
     }
 
     /***********DESKTOP SITE************/
-    @media (min-width: 880px) {
+    @media (min-width: 881px) {
       /* reel */
     .reel-wrapper {
       width: 100%;
@@ -685,11 +693,17 @@ import Cta from "../components/cta.astro";
       }
 
       /* dankort sektion */
+
+      .dankort-wrapper {
+        display: flex;
+        justify-content: center;
+
+      }
       .dankort {
-        transform: rotate(90deg);
-        position: relative;
-        left: -150px;
-        top: -150px;
+        transform: translateX(300px)
+             translateY(-30px) rotate(90deg);
+      width:200px;        
+      margin-bottom: -50px;
       }
 
       .h2dankort {
@@ -719,16 +733,15 @@ import Cta from "../components/cta.astro";
 
         z-index: 1000;
       }
-
+.bi-wrapper {
+  display: flex;
+justify-content: center;
+}
       /*bi*/
-      #Layer1 {
+      #bi {
         width: 150px;
-
-        position: relative;
-        top: 50px;
-        left: 665px;
-
-        transform: rotate(15deg);
+      transform: translateX(125px)
+             translateY(75px) rotate(15deg);
       }
 
       .content2 {
@@ -738,26 +751,30 @@ import Cta from "../components/cta.astro";
 
       .herovideo {
         border-radius: 50px 50px 50px 50px;
-        max-width: 1200px;
+        max-width: 1000px;
         box-shadow: 0px 5px 22px 5px rgba(0, 0, 0, 0.2);
         margin-top: 20px;
         margin-bottom: 20px;
       }
-
+.fugl-wrapper{
+  display: flex;
+   justify-content: center;
+}
       #fugl {
         width: 100px;
-        position: relative;
-        top: -40px;
-        left: 350px;
+      transform: translateX(135px)
+             translateY(-60px);
 
         z-index: 10;
       }
-
+.sommerfugl-wrapper {
+  display: flex;
+  justify-content: center;
+}
       #sommerfugl {
         width: 150px;
-        position: relative;
-        top: -100px;
-        left: 85px;
+      transform: translateX(-300px)
+             translateY(-40px) rotate(-10deg);
 
         z-index: 10;
       }
@@ -852,3 +869,14 @@ import Cta from "../components/cta.astro";
     }
   </style>
 </Layout>
+
+<!-- 
+.sommerfugl-wrapper {
+  display: flex;
+  justify-content: center;
+}
+  #sommerfugl {
+    width: 100px;
+      transform: translateX(-285px)
+             translateY(-60px);
+  } -->
