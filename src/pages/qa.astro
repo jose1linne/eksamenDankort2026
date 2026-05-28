@@ -5,20 +5,19 @@ import "../css/global.css";
 
 <Layout>
   <h1>Ofte stillede spørgsmål</h1>
+
   <div class="container">
-    <div class="speechbubbles1">
-      <img src="billeder/Union copy.webp" alt="" />
-      <p>Koster det mig noget som forbruger?</p>
+    <div class="butterfly">
+      <img src="billeder/butterfly.webp" alt="butterfly" />
     </div>
 
-    <div class="speechbubbles2">
-      <img src="billeder/Union.webp" alt="" />
-      <p>
-        Nej. Alle donationer sker gratis og automatisk for dig som kortholder.
-      </p>
+    <div class="bird">
+      <img src="billeder/bird.webp" alt="bird" />
     </div>
 
-    <img class="img" src="billeder/1Berry.webp" alt="" />
+    <div class="derry">
+      <img src="billeder/derry.webp" alt="derry" />
+    </div>
   </div>
 
   <div class="dropdown">
@@ -179,67 +178,33 @@ import "../css/global.css";
     font-size: 60px;
     text-align: center;
   }
+  /************ Dyr ************/
+  .butterfly {
+    position: absolute;
+    top: 40px;
+    left: 750px;
+    width: 250px;
+  }
+  .bird {
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    width: 450px;
+  }
+  .derry {
+    position: absolute;
+    bottom: 10px;
+    left: 500px;
+    width: 500px;
+  }
 
   /************ PAGE LAYOUT ************/
   .container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
   }
 
-  /************ TOP SPEECH BUBBLE ************/
-  .speechbubbles1 {
-    position: absolute;
-    top: 60px;
-    left: 250px;
-    width: 550px;
-  }
-
-  .speechbubbles1 img {
-    width: 100%;
-  }
-
-  .speechbubbles1 p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    text-align: center;
-    font-size: 28px;
-    font-family: "Raleway", sans-serif;
-  }
-
-  /************ BOTTOM SPEECH BUBBLE ************/
-  .speechbubbles2 {
-    position: absolute;
-    top: 520px;
-    left: 200px;
-    width: 500px;
-  }
-
-  .speechbubbles2 img {
-    width: 100%;
-  }
-
-  .speechbubbles2 p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    text-align: center;
-    font-size: 26px;
-    font-family: "Raleway", sans-serif;
-  }
-
-  /************ berry img ************/
-  .img {
-    position: absolute;
-    right: 200px;
-    bottom: 0;
-    width: 600px;
-  }
   /************ DROPDOWN BOX ************/
   .dropdown {
     background-color: #c7ebad;
@@ -261,7 +226,6 @@ import "../css/global.css";
     font-family: "Raleway", sans-serif;
     white-space: normal;
     word-break: break-word;
-    flex: 1;
     padding-right: 30px;
   }
   /************ DROPDOWN ARROW ************/
@@ -312,58 +276,39 @@ import "../css/global.css";
   /************ mobli site ************/
   @media (max-width: 768px) {
     .dropdown-content.active {
-      padding: 10px 20px 200px;
-    }
-    .speechbubbles1,
-    .speechbubbles2,
-    .img {
-      position: relative;
-      top: 0;
-      left: auto;
-      right: auto;
-      bottom: auto;
-      transform: none;
-    }
-
-    .speechbubbles1,
-    .speechbubbles2 {
-      width: 65%;
-      margin: 15px auto;
-    }
-
-    .speechbubbles1 p,
-    .speechbubbles2 p {
-      font-size: 17px;
-      width: 70%;
-    }
-
-    .img {
-      width: 50%;
-      display: block;
-      margin: 10px auto 0;
+      padding: 10px 26px 280px;
     }
   }
+
   /************ Desktop site ************/
+  @media (max-width: 880px) {
+    main {
+      margin: 0 auto;
+      max-width: 350px;
+    }
+  }
   @media (min-width: 880px) {
-    .speechbubbles1 {
-      position: absolute;
-      top: 60px;
-      left: 360px;
-      width: 400px;
+    main {
+      margin: 0 auto;
+      max-width: 1200px;
     }
-
-    .speechbubbles2 {
-      position: absolute;
-      top: 520px;
-      left: 200px;
-      width: 450px;
-    }
-
-    .img {
-      position: absolute;
-      right: 200px;
-      bottom: 0;
-      width: 550px;
-    }
+  }
+  .butterfly {
+    position: absolute;
+    top: 40px;
+    left: 750px;
+    width: 250px;
+  }
+  .bird {
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    width: 450px;
+  }
+  .derry {
+    position: absolute;
+    bottom: 10px;
+    left: 500px;
+    width: 500px;
   }
 </style>
