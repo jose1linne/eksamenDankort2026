@@ -233,11 +233,24 @@ import Layout from "../layouts/layout.astro";
   </section>
 
   <style>
-    .svgBlomster {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+    @media (min-width: 880px) {
+      .svgBlomster {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 1300px;
+      }
     }
+
+    @media (max-width: 880px) {
+      .svgBlomster {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 850px;
+      }
+    }
+
     #blomst1 {
       width: 30px;
     }
@@ -285,11 +298,6 @@ import Layout from "../layouts/layout.astro";
     }
 
     @media (min-width: 880px) {
-      footer {
-        padding-left: 100px;
-        margin-left: -120px;
-        margin-right: -120px;
-      }
       /* LIST ITEMS */
 
       .grid-1 li {
@@ -319,11 +327,6 @@ import Layout from "../layouts/layout.astro";
     @media (max-width: 880px) {
       .footer-box img {
         width: 17px;
-      }
-
-      footer {
-        margin-left: -30px;
-        margin-right: -30px;
       }
 
       /* TITLE */

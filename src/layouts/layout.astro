@@ -20,7 +20,25 @@ const { titel } = Astro.props;
 
   <body>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  @media (min-width: 880px) {
+    main {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+  }
+
+  @media (max-width: 880px) {
+    main {
+      margin: 0 auto;
+      max-width: 350px;
+    }
+  }
+</style>
