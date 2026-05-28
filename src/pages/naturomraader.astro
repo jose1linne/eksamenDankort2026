@@ -23,7 +23,8 @@ const data = await fetch(url, options)
 
 <Layout>
 <div>
-  <h2>Her har vi være med til at donere til den danske natur</h2>
+  <h1>Her har vi være med til at donere til den danske natur</h1>
+  <div class="bi-wrapper">
    <svg id="BiSVG" data-name="Bi-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.47 130.24">
           <g id="Bi">
             <path id="biKrop" d="M78.1,68.9c-6.11,12.82-31.77,12.63-51.41,3.26C7.05,62.8-3.92,44.81,2.19,31.99c6.11-12.82,26.99-15.62,46.63-6.26,19.64,9.37,35.39,30.35,29.28,43.17Z" style="fill: none; stroke: #010101; stroke-miterlimit: 10;"></path>
@@ -57,6 +58,9 @@ const data = await fetch(url, options)
             <path id="effekt-14" data-name="effekt" d="M166.97,58.83c-.16-2.14-1.38-4.18-3.18-5.33" style="fill: none; stroke: #010101; stroke-miterlimit: 10;"></path>
           </g>
         </svg>
+        </div>
+
+        <p class="mobile-text"> Klik på blomsterne for at læse mere om de områder Øremærket har doneret til</p>
   <div class="container">
 <section class="DK_map">
 <?xml version="1.0" encoding="UTF-8"?>
@@ -135,18 +139,42 @@ const data = await fetch(url, options)
 <Naturcard />
 </div>
 </div>
-    <Button text="Ofte stillede spørgsmål" href="/#" />
+<div class="btn_container">
+    <Button text="Ofte stillede spørgsmål" href="/qa" />
+    </div>
 </Layout>
 
 <style>
+
+h1 { 
+  text-align:center;
+  margin-inline: auto;
+  max-width: 500px;
+  margin-top: 70px;
+}
+
+.bi-wrapper {
+  display: flex;
+  justify-content: center;
+}
   #BiSVG {
-    position:relative;
-    max-width: 200px;
+    width: 100px;
+      transform: translateX(-285px)
+             translateY(-60px);
+  }
+
+  .btn_container {
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: -50px;
   }
 .container{
+  display: block;
    position: relative;
    box-shadow: 0px 0px 0px;
-
+margin-top: 30px;
+margin-inline: 100px;
 }
 
 #Hotspots path {
@@ -162,28 +190,45 @@ const data = await fetch(url, options)
 #Hotspots path.active {
     fill: rgb(255, 242, 0);
 }
-svg {
+.DK_map svg{
     width: 100%;
     height: auto;
     display: block;
 }
   @media (max-width: 880px) {
 
-.container {
-  display: block;
-}
+      #BiSVG {
+    width: 100px;
+      transform: translateX(-130px)
+             translateY(-30px);
   }
-  @media (min-width: 880px) {
 
+.container {
+  margin-inline: 0px;
+  margin-top: 20px;
+}
+
+  }
+
+  .mobile-text {
+text-align: center;
+margin-top: 50px;
+  }
+  @media (min-width: 881px) {
+    
+.mobile-text {
+  visibility: hidden;
+  opacity: 0;
+
+}
 .container {
     display: grid;
     grid-template-columns: 5fr 6fr;
-    align-items: start;
-
-    border-radius: 24px 24px 0 0;
-
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
-}}
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    
+}
+}
 
 </style>
 <script define:vars={{ data }}>
