@@ -1,5 +1,5 @@
 ---
-//@ts-nocheck
+
 import Layout from "../layouts/layout.astro";
 import "../css/global.css";
 import Naturcard from "../components/Naturcard.astro";
@@ -105,9 +105,9 @@ const data = await fetch(url, options)
 <style>
   
 main{
-    display: grid;
-    grid-template-columns: 5fr 3fr;
+   position: relative;
 }
+
 #Hotspots path {
     fill: #DE2229;
     cursor: pointer;
@@ -117,8 +117,29 @@ main{
 
 #Hotspots path:hover {
     fill: white;
-    filter: drop-shadow(10 10 10px #ff00f7);
 }
+#Hotspots path.active {
+    fill: white;
+}
+svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  @media (max-width: 880px) {
+
+main {
+  display: block;
+}
+  }
+  @media (min-width: 880px) {
+
+main {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: start;
+}}
+
 </style>
 <script define:vars={{ data }}>
 
@@ -135,6 +156,13 @@ const infoPopup = document.querySelector("#infoPopup");
 hotspots.forEach((spot) => {
 
     spot.addEventListener("click", () => {
+
+  hotspots.forEach((s) => {
+            s.classList.remove("active");
+        });
+
+        // Tilføjer active til den klikkede
+        spot.classList.add("active");
 
         // Finder matchende objekt i API
         const område = data.find(
@@ -159,5 +187,13 @@ const closePopup = document.querySelector("#closePopup");
 
 closePopup.addEventListener("click", () => {
     infoPopup.classList.remove("active");
+      hotspots.forEach((s) => {
+        s.classList.remove("active");
+    });
+     overskrift.textContent = "Guide og information";
+
+    underrubrik.textContent = "Click på en af hotspotsne";
+
+    billede.innerHTML = "";
 });
 </script>
