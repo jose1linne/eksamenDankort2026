@@ -51,8 +51,12 @@
     margin-top: 1rem;
 }
 
+.placeholder {
+    font-size: 20px;
+}
+
 #closePopup {
-    display: block;
+    display: none;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -69,7 +73,6 @@
 
     font-size: 2rem;
 
-    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -80,8 +83,10 @@
         color 0.25s ease,
         transform 0.2s ease;
 
-            opacity: 0;
-    visibility: hidden;
+}
+
+.info-text.active #closePopup {
+    display: flex;
 }
 
 #closePopup:hover {
