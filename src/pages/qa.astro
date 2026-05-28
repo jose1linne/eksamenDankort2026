@@ -7,18 +7,24 @@ import "../css/global.css";
   <h1>Ofte stillede spørgsmål</h1>
 
   <div class="container">
+    <div class="butterfly-wrapper">
     <div class="butterfly">
       <img src="billeder/butterfly.webp" alt="butterfly" />
     </div>
+</div>
 
+<div class="bird-wrapper">
     <div class="bird">
       <img src="billeder/bird.webp" alt="bird" />
     </div>
+</div>
 
+<div class="derry-wrapper">
     <div class="derry">
       <img src="billeder/derry.webp" alt="derry" />
     </div>
   </div>
+</div>
 
   <div class="dropdown">
     <span class="dropdown-text">
@@ -177,32 +183,15 @@ import "../css/global.css";
   h1 {
     font-size: 60px;
     text-align: center;
+    margin-bottom: -100px;
   }
-  /************ Dyr ************/
-  .butterfly {
-    position: absolute;
-    top: 40px;
-    left: 750px;
-    width: 250px;
-  }
-  .bird {
-    position: absolute;
-    top: 150px;
-    left: 60px;
-    width: 450px;
-  }
-  .derry {
-    position: absolute;
-    bottom: 10px;
-    left: 500px;
-    width: 500px;
-  }
+
+
 
   /************ PAGE LAYOUT ************/
   .container {
     position: relative;
     width: 100%;
-    height: 70vh;
   }
 
   /************ DROPDOWN BOX ************/
@@ -274,41 +263,64 @@ import "../css/global.css";
     width: 100%;
   }
   /************ mobli site ************/
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     .dropdown-content.active {
       padding: 10px 26px 280px;
     }
+    /************ Dyr ************/
+  
+  .butterfly-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .butterfly {
+       transform: translateX(130px)
+             translateY(20px) rotate(-10deg);
+    width: 100px;
+  }
+  
+  .bird-wrapper {
+    display: flex;
+    justify-content: center; 
+  }
+  .bird {
+      transform: translateX(-100px)
+             translateY(-10px) scaleX(-1);
+    width: 150px;
+  }
+
+.derry-wrapper {
+    display: flex;
+    justify-content: center;
+}
+  .derry {
+      transform: translateX(40px)
+             translateY(-10px);
+    width: 200px;
+  }
   }
 
   /************ Desktop site ************/
-  @media (max-width: 880px) {
-    main {
-      margin: 0 auto;
-      max-width: 350px;
-    }
-  }
-  @media (min-width: 880px) {
+  @media (min-width: 881px) {
     main {
       margin: 0 auto;
       max-width: 1200px;
     }
-  }
-  .butterfly {
-    position: absolute;
-    top: 40px;
-    left: 750px;
+     .butterfly {
+       transform: translateX(630px)
+             translateY(130px) rotate(-10deg);
     width: 250px;
   }
   .bird {
-    position: absolute;
-    top: 150px;
-    left: 60px;
+      transform:scaleX(-1) translateX(-50px)
+             translateY(70px);
     width: 450px;
   }
   .derry {
-    position: absolute;
-    bottom: 10px;
-    left: 500px;
+      transform: translateX(450px)
+             translateY(-10px);
     width: 500px;
   }
+  }
+ 
 </style>
