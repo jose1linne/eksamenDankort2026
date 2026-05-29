@@ -18,7 +18,6 @@ const options = {
 const data = await fetch(url, options)
 .then((res) => res.json());
 
-//console.log(data);
 ---
 
 <Layout titel="Naturområder">
@@ -234,16 +233,15 @@ font-size: 20px;
 </style>
 <script define:vars={{ data }}>
 
-const overskrift = document.querySelector(".info-text h2");
-const underrubrik = document.querySelector(".placeholder");
+const overskrift = document.querySelector(".card h2");
+const infotext = document.querySelector(".info-text");
 const billede = document.querySelector(".info-box");
 
 
-// Finder ALLE hotspots
 const hotspots = document.querySelectorAll("#Hotspots path");
 
 const infoPopup = document.querySelector("#infoPopup");
-// Loop gennem alle hotspots
+
 hotspots.forEach((spot) => {
 
     spot.addEventListener("click", () => {
@@ -252,20 +250,17 @@ hotspots.forEach((spot) => {
             s.classList.remove("active");
         });
 
-        // Tilføjer active til den klikkede
         spot.classList.add("active");
 
-        // Finder matchende objekt i API
         const område = data.find(
             item => item.id == spot.id
         );
 
         console.log(område);
 
-        // Indsætter data
         overskrift.textContent = område.title;
 
-        underrubrik.textContent = område.description;
+        infotext.textContent = område.description;
 
         billede.innerHTML = `
             <img src="${område.image}" alt="${område.title}">
@@ -283,7 +278,7 @@ closePopup.addEventListener("click", () => {
     });
      overskrift.textContent = "";
 
-    underrubrik.textContent = "Klik på blomsterne for at læse mere om de områder Øremærket har doneret til";
+    infotext.textContent = "Klik på blomsterne for at læse mere om de områder Øremærket har doneret til";
 
     billede.innerHTML = "";
 });

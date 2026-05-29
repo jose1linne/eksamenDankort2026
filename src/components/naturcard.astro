@@ -1,18 +1,18 @@
 ---
 ---
-<section class="info-text" id="infoPopup">
+<section class="card" id="infoPopup">
             <h2></h2>
             <article>
-                <p class="placeholder">Klik på blomsterne for at læse mere om de områder Øremærket har doneret til</p>
+                <p class="info-text">Klik på blomsterne for at læse mere om de områder Øremærket har doneret til</p>
             </article>
-            <aside id="efficiency" class="info-box"></aside>
+            <div class="info-box"></div>
               <button id="closePopup" aria-label="Luk popup">
     &times;
 </button>
 </section>
 
 <style>
-    .info-text {
+    .card {
     position: fixed;
 
     left: 0;
@@ -39,19 +39,19 @@
       visibility 0.3s;
 }
 
-.info-text.active {
+.card.active {
     opacity: 1;
     visibility: visible;
 
     transform: translateY(0);
 }
 
-.info-text img {
+.card img {
     border-radius: 12px;
     margin-top: 1rem;
 }
 
-.placeholder {
+.info-text {
     font-size: 20px;
     margin-block: 20px;
 }
@@ -86,7 +86,7 @@
 
 }
 
-.info-text.active #closePopup {
+.card.active #closePopup {
     display: flex;
 }
 
@@ -100,7 +100,7 @@
 
 @media (min-width: 881px) {
 
-.info-text {
+.card {
 
 position: relative;
 
